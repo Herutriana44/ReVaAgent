@@ -8,7 +8,8 @@ from rdkit import Chem
 from .utils import get_data_dir
 from .molecular_utils import MolecularFunction, MolecularScoring
 from .protein_analysis import ProtParamClone
-from scipy.constants import e
+from scipy.constants import e, epsilon_0, Boltzmann
+import os
 
 def ml_dock(data):
     """Classical ML docking function"""

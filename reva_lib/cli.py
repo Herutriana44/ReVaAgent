@@ -5,6 +5,7 @@ Command Line Interface for ReVa AI Vaccine Design Library
 import argparse
 import sys
 import os
+from scipy.constants import e, epsilon_0, Boltzmann
 from .reva import ReVa
 from .qreva import QReVa
 from .utils import get_base_path, create_folder, generate_filename_with_timestamp_and_random

@@ -5,6 +5,8 @@ Molecular utilities for ReVa AI Vaccine Design Library
 import numpy as np
 from rdkit import Chem
 from rdkit.Chem import Descriptors, AllChem, rdMolTransforms, rdMolDescriptors
+from scipy.constants import e, epsilon_0, Boltzmann
+import os
 
 class MolecularFunction:
     """Class containing molecular calculation functions"""

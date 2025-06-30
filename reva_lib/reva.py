@@ -11,6 +11,7 @@ import pandas as pd
 import tensorflow as tf
 from tensorflow.keras.models import load_model
 from qiskit_machine_learning.algorithms import VQC
+from scipy.constants import e, epsilon_0, Boltzmann
 
 from .utils import (
     get_base_path, get_model_dir, get_label_dir, get_data_dir,

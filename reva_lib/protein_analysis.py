@@ -7,6 +7,8 @@ from Bio.SeqUtils.ProtParam import ProteinAnalysis
 from Bio.SeqUtils import IsoelectricPoint as IP
 from rdkit import Chem
 from rdkit.Chem import Descriptors, rdMolDescriptors
+from scipy.constants import e, epsilon_0, Boltzmann
+import os
 
 class ProtParamClone:
     """Protein parameter analysis class"""

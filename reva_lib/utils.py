@@ -182,16 +182,27 @@ def perform_blastp(query_sequence, blast_activate=False):
     print(f"Time for BLASTp : {time_blast} s")
     return "Non-similarity"
 
+# === DEVICE UTILS ===
+def get_device():
+    """Return device info for TensorFlow and HuggingFace (0=GPU, -1=CPU)"""
+    # TensorFlow: will use GPU automatically if available
+    gpus = tf.config.list_physical_devices('GPU')
+    if gpus:
+        return {'tf': 'GPU', 'hf': 0}
+    else:
+        return {'tf': 'CPU', 'hf': -1}
+
 # LLM (HuggingFace) integration
 _llm_pipeline = None
 
 def get_llm_pipeline(model_name="microsoft/biogpt"):
-    """Load and cache the LLM pipeline (default: microsoft/biogpt)"""
+    """Load and cache the LLM pipeline (default: microsoft/biogpt), using GPU if available."""
     global _llm_pipeline
+    device = get_device()['hf']
     if _llm_pipeline is None or _llm_pipeline.model.name_or_path != model_name:
         tokenizer = AutoTokenizer.from_pretrained(model_name)
         model = AutoModelForCausalLM.from_pretrained(model_name)
-        _llm_pipeline = pipeline("text-generation", model=model, tokenizer=tokenizer)
+        _llm_pipeline = pipeline("text-generation", model=model, tokenizer=tokenizer, device=device)
     return _llm_pipeline
 
 def run_llm_review(input_text_or_path, model_name="microsoft/biogpt", max_new_tokens=256):

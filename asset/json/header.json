@@ -1,0 +1,9 @@
+{
+    "res1" : ["Amino Acid", "Predictions", "Probabilities"],
+    "res2" : ["Peptide", "Label"],
+    "res3" : ["Peptide", "Allergenicity", "Toxin", "Antigenicity", "Hydrophobicity", "Kolaskar Antigenicity", "Tangonkar Antigenicity", "Emini Surface Accessibility", "Similarity"],
+    "res4" : ["Peptide", "Allergenicity", "Toxin", "Antigenicity"],
+    "physicochemical" : ["Peptide", "Instability", "Aliphatic", "GRAVY", "Extinction", "Half Life(Mamalia)", "Formula","C", "H", "N", "O", "S", "Theoretical pI", "mol weight"],
+    "classical_docking_ff" : ["Ligand", "Receptor", "Receptor id", "Attractive", "Repulsive", "VDW LJ Force", "Coulomb Energy","Force Field"],
+    "classical_docking_ff_adjuvant" : ["Ligand", "Receptor", "Receptor id","Adjuvant CID","Adjuvant IsoSMILES", "Attractive", "Repulsive", "VDW LJ Force", "Coulomb Energy","Force Field"]
+}

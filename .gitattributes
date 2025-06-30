@@ -1,0 +1,11 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+asset/data/b_receptor_v2.csv filter=lfs diff=lfs merge=lfs -text
+asset/data/t_receptor_v2.csv filter=lfs diff=lfs merge=lfs -text
+asset/model/allerginicity.h5 filter=lfs diff=lfs merge=lfs -text
+asset/model/antigenicity.h5 filter=lfs diff=lfs merge=lfs -text
+asset/model/BPepTree.joblib filter=lfs diff=lfs merge=lfs -text
+asset/model/BPepTree.pkl filter=lfs diff=lfs merge=lfs -text
+asset/model/TPepTree.joblib filter=lfs diff=lfs merge=lfs -text
+asset/model/TPepTree.pkl filter=lfs diff=lfs merge=lfs -text
+qiskit/_accelerate.pyd filter=lfs diff=lfs merge=lfs -text

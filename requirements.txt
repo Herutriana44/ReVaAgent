@@ -1,0 +1,14 @@
+PyQt5
+tensorflow
+numpy
+scikit-learn==1.2.2
+openpyxl
+torch
+pillow
+qiskit-machine-learning
+qiskit
+scipy
+rdkit
+biopython
+PyQt5
+pandas
